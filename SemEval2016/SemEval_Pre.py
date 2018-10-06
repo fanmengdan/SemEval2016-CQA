@@ -30,8 +30,14 @@ for thread in soup.find_all('thread'):
     tempQ.append(Q['relq_date'])
     tempQ.append(Q['relq_id'])
     tempQ.append(Q['relq_userid'])
-    tempQ.append(str(Q.relqsubject.string))
-    tempQ.append(str(Q.relqbody.string))
+    if str(Q.relqsubject.string):
+        tempQ.append(str(Q.relqsubject.string))
+    else:
+        tempQ.append(',')
+    if str(Q.relqbody.string):
+        tempQ.append(str(Q.relqbody.string))
+    else:
+        tempQ.append(",")
     tempQ.append(str(len(thread.find_all('relcomment'))))
 
     # add A info.
@@ -41,7 +47,10 @@ for thread in soup.find_all('thread'):
         temp.append(A['relc_date'])
         temp.append(A['relc_id'])
         temp.append(A['relc_userid'])
-        temp.append(str(A.relctext.string))
+        if str(A.relctext.string):
+            temp.append(str(A.relctext.string))
+        else:
+            temp.append(",")
         if str(A['relc_relevance2relq'])=="Good":
             temp.append("1")
         else:
@@ -56,8 +65,14 @@ for thread in soup1.find_all('thread'):
     tempQ.append(Q['relq_date'])
     tempQ.append(Q['relq_id'])
     tempQ.append(Q['relq_userid'])
-    tempQ.append(str(Q.relqsubject.string))
-    tempQ.append(str(Q.relqbody.string))
+    if str(Q.relqsubject.string):
+        tempQ.append(str(Q.relqsubject.string))
+    else:
+        tempQ.append(',')
+    if str(Q.relqbody.string):
+        tempQ.append(str(Q.relqbody.string))
+    else:
+        tempQ.append(",")
     tempQ.append(str(len(thread.find_all('relcomment'))))
 
     # add A info.
@@ -67,7 +82,10 @@ for thread in soup1.find_all('thread'):
         temp.append(A['relc_date'])
         temp.append(A['relc_id'])
         temp.append(A['relc_userid'])
-        temp.append(str(A.relctext.string))
+        if str(A.relctext.string):
+            temp.append(str(A.relctext.string))
+        else:
+            temp.append(",")
         if str(A['relc_relevance2relq'])=="Good":
             temp.append("1")
         else:
@@ -82,8 +100,14 @@ for thread in soup2.find_all('thread'):
     tempQ.append(Q['relq_date'])
     tempQ.append(Q['relq_id'])
     tempQ.append(Q['relq_userid'])
-    tempQ.append(str(Q.relqsubject.string))
-    tempQ.append(str(Q.relqbody.string))
+    if str(Q.relqsubject.string):
+        tempQ.append(str(Q.relqsubject.string))
+    else:
+        tempQ.append(',')
+    if str(Q.relqbody.string):
+        tempQ.append(str(Q.relqbody.string))
+    else:
+        tempQ.append(",")
     tempQ.append(str(len(thread.find_all('relcomment'))))
 
     # add A info.
@@ -93,7 +117,10 @@ for thread in soup2.find_all('thread'):
         temp.append(A['relc_date'])
         temp.append(A['relc_id'])
         temp.append(A['relc_userid'])
-        temp.append(str(A.relctext.string))
+        if str(A.relctext.string):
+            temp.append(str(A.relctext.string))
+        else:
+            temp.append(",")
         if str(A['relc_relevance2relq'])=="Good":
             temp.append("1")
         else:
