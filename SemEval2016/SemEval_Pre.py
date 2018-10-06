@@ -30,11 +30,11 @@ for thread in soup.find_all('thread'):
     tempQ.append(Q['relq_date'])
     tempQ.append(Q['relq_id'])
     tempQ.append(Q['relq_userid'])
-    if str(Q.relqsubject.string):
+    if len(str(Q.relqsubject.string))!=0:
         tempQ.append(str(Q.relqsubject.string))
     else:
         tempQ.append(',')
-    if str(Q.relqbody.string):
+    if len(str(Q.relqbody.string))!=0:
         tempQ.append(str(Q.relqbody.string))
     else:
         tempQ.append(",")
@@ -47,7 +47,7 @@ for thread in soup.find_all('thread'):
         temp.append(A['relc_date'])
         temp.append(A['relc_id'])
         temp.append(A['relc_userid'])
-        if str(A.relctext.string):
+        if len(str(A.relctext.string))!=0:
             temp.append(str(A.relctext.string))
         else:
             temp.append(",")
@@ -65,11 +65,11 @@ for thread in soup1.find_all('thread'):
     tempQ.append(Q['relq_date'])
     tempQ.append(Q['relq_id'])
     tempQ.append(Q['relq_userid'])
-    if str(Q.relqsubject.string):
+    if len(str(Q.relqsubject.string))!=0:
         tempQ.append(str(Q.relqsubject.string))
     else:
         tempQ.append(',')
-    if str(Q.relqbody.string):
+    if len(str(Q.relqbody.string))!=0:
         tempQ.append(str(Q.relqbody.string))
     else:
         tempQ.append(",")
@@ -82,7 +82,7 @@ for thread in soup1.find_all('thread'):
         temp.append(A['relc_date'])
         temp.append(A['relc_id'])
         temp.append(A['relc_userid'])
-        if str(A.relctext.string):
+        if len(str(A.relctext.string))!=0:
             temp.append(str(A.relctext.string))
         else:
             temp.append(",")
@@ -100,11 +100,11 @@ for thread in soup2.find_all('thread'):
     tempQ.append(Q['relq_date'])
     tempQ.append(Q['relq_id'])
     tempQ.append(Q['relq_userid'])
-    if str(Q.relqsubject.string):
+    if len(str(Q.relqsubject.string))!=0:
         tempQ.append(str(Q.relqsubject.string))
     else:
         tempQ.append(',')
-    if str(Q.relqbody.string):
+    if len(str(Q.relqbody.string))!=0:
         tempQ.append(str(Q.relqbody.string))
     else:
         tempQ.append(",")
@@ -117,7 +117,7 @@ for thread in soup2.find_all('thread'):
         temp.append(A['relc_date'])
         temp.append(A['relc_id'])
         temp.append(A['relc_userid'])
-        if str(A.relctext.string):
+        if len(str(A.relctext.string))!=0:
             temp.append(str(A.relctext.string))
         else:
             temp.append(",")
